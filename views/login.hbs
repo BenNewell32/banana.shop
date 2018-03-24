@@ -1,0 +1,56 @@
+<section class="login-bg">
+
+
+    <div class="login-card">
+
+        <div class="log-container">
+
+            <div class="login-form">
+
+                <h1>Login</h1>
+                    
+                {{#if errors}}
+                    {{#each errors}}
+                    <p class="alert alert-danger">{{msg}}</p>
+                    {{/each}}
+                {{/if}}
+
+                {{#if success_msg}}
+                    <p class="alert alert-success">{{success_msg}}</p>
+                {{/if}}
+
+                {{#if error_msg}}
+                    <p class="alert alert-danger">{{error_msg}}</p>
+                {{/if}}
+
+                {{#if error}}
+                    <p class="alert alert-danger">{{error}}</p>
+                {{/if}}
+
+                <form action="/login/signin" method="post">
+                    <label>Username</label>
+                    <input type="text" name="username" id="login-username" required="">
+                    <label>Password</label>
+                    <input type="password" name="password" id="login-password" required="">
+                    <input type="submit" value="Login" id="login-form-btn">
+                </form>
+            </div>
+            <div class="register-form">
+                <br>
+                <h1>Register</h1>
+                <form action="/login/register" method="POST">
+                    <label>Username</label>
+                    <input type="text" name="username" required="">
+                    <label>Email</label>
+                    <input type="email" name="email" required="">
+                    <label>Password</label>
+                    <input type="password" name="password" required="">
+                    <label>Re-enter Password</label>
+                    <input type="password" name="password_check" required="">
+                    <input type="submit" value="Register" id="register-form-btn">
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

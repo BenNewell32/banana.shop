@@ -1,0 +1,410 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:after {
+  box-sizing: inherit;
+  margin: inherit;
+  padding: inherit;
+}
+
+/* NOAH LOGIN */
+
+.login-bg {
+	height: 100vh;
+	width: 100%;
+	margin-top: 100px;
+	padding: 0;
+	background: url("../assets/img/login-banana.jpg");
+	font-family: sans-serif;
+	background-size: cover;
+}
+.log-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	padding: 40px;
+	background: rgba(0, 0, 0, .8);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+	border-radius: 10px;
+}
+ .log-container h1 {
+	margin: 0 0 30px;
+	padding: 0;
+	color: white;
+	text-align: center;
+}
+.log-container .login-form {
+	position: relative;
+}
+.log-container .login-form input {
+	width: 100%;
+	padding: 5px 0;
+	font-size: 16px;
+	color: black;
+	margin-bottom: 10px;
+	border: 1px solid white;
+	outline: none;
+	background: white;
+}
+ .log-container .login-form label {
+	position: relative;
+	top: 0;
+	left: 0;
+	padding: 5px 0;
+	font-size: 16px;
+	color: #fff;
+	pointer-events: none;
+	transition: .5s;
+}
+.log-container .register-form {
+	position: relative;
+}
+.log-container .register-form input {
+	width: 100%;
+	padding: 5px 0;
+	font-size: 16px;
+	color: black;
+	margin-bottom: 10px;
+	border: 1px solid white;
+	outline: none;
+	background: white;
+}
+ .log-container .register-form label {
+	position: relative;
+	top: 0;
+	left: 0;
+	padding: 5px 0;
+	font-size: 16px;
+	color: #fff;
+	pointer-events: none;
+	transition: .5s;
+}
+
+#login-form-btn ,
+#register-form-btn {
+	color: black;
+	background: #f2b632;
+}
+
+
+/*RENAENAE*/
+
+h1 {
+  text-align: center;
+}
+
+/********/
+/* icon */
+/********/
+.icon{
+  width: 40px;
+  height: 40px;
+  margin-top: auto;
+}
+
+
+/***********/
+/* nav bar */
+/***********/
+.navbar-toggle {
+  width: 100%;
+}
+
+.navbar-toggle button{
+  float: left;
+}
+.navbar-inverse{
+  background:#222B31 !important;
+  border-bottom:4px solid #ADB227 !important;
+}
+
+.navbar-brand{
+  font:200 14px helvetica neue !important;
+  color:#FFF !important;
+  letter-spacing:2px;
+  margin-bottom: 7px;
+  margin-top: 3px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+
+
+ul.nav.navbar-nav {
+  width: 100%;
+  text-align: center;
+}
+
+.nav{
+  margin-bottom:0px;
+
+  a {
+    font:500 11px Lato;
+    letter-spacing:2px;
+    padding:5px !important;
+    color:#a3bfc6 !important;
+    text-transform:uppercase;
+    position:relative;
+    z-index:1000;
+    height: 50px;
+  }
+  a:hover{
+    /*color:#FFF !important;*/
+
+  }
+  li{
+    position:relative;
+
+  }
+}
+
+.navbar-inverse .navbar-toggle{
+  border:none;
+}
+
+.navbar-collapse{
+  box-shadow:none !important;
+  border:none !important;
+  margin: auto;
+}
+
+.navbar-inverse .navbar-toggle:hover{
+  background:transparent !important;
+}
+
+.navbar-inverse .navbar-toggle:focus{
+  background:transparent !important;
+}
+
+.navbar-inverse .navbar-toggle:active{
+  background:transparent !important;
+}
+
+.icon-bar{
+  background:#a3bfc6 !important;
+  /*margin: auto;*/
+  float: left;
+  margin: 10px;
+
+}
+
+.sr-only {
+  float: left;
+  clear: right;
+  color: white;
+  background-color: purple;
+}
+
+.navCart {
+  float: right;
+}
+
+.cartIcon img{
+  height: 40px;
+  width: 40px;
+}
+
+.hover{
+  display:block;
+  position:absolute;
+  width:0%;
+  height:100%;
+  top:0px;
+  left:0px;
+  background:#EE445F !important;
+  z-index:0;
+  opacity:0;
+}
+
+@media (max-width: 767px) {
+.nav{
+  padding-bottom:20px;
+  a{
+    padding:12px !important;
+  }
+}
+}
+
+@media (max-width: 480px) {
+  .nav{
+    padding-bottom:20px;
+  }
+}
+
+
+.collapse.navbar-collapse{
+  margin: auto;
+  width: 70%;
+}
+/**********/
+/* footer */
+/**********/
+footer{
+  background:#222B31;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:80px;
+  width:100%;
+  border-top:4px solid #ADB227 !important;
+
+}
+
+
+.footer-brand{
+  position: absolute;
+  z-index: -1;
+  font:20px Lato !important;
+  text-transform:uppercase;
+  color:rgba(255, 255, 255, 0.23) !important;
+  letter-spacing:2px;
+  margin-top:2px;
+  margin-left:-15px;
+  text-align: center;
+  justify-content: center;
+}
+
+/************/
+/* profiles */
+/************/
+.img-circle {
+  border-radius: 50%;
+  margin: auto;
+}
+
+img.img-circle {
+  margin: auto;
+}
+
+.img-circle:hover{
+  background: rgba(255, 255, 255, 0.31);
+
+}
+
+/*****************/
+/* products page */
+/*****************/
+
+.productshelf{
+  background: #818B75;
+  border: solid border-style #222B31;
+  height: 2px;
+  text-align: left;
+  align-content: left;
+  justify-content: left;
+  width: 100%;
+}
+
+.buy{
+  margin-top:15px;
+
+}
+
+/*****************/
+/*  FRONT PAGE  */
+/*****************/
+.oneLogo {
+  margin: auto;
+  height: 300px;
+  width: 300px;
+}
+
+.oneLogo img{
+  height: 400px;
+}
+
+.feat {
+  background-color: white;
+  width: 97%;
+  height: 370px;
+  margin: auto;
+  margin-top: 10px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.oneImg {
+  margin: auto;
+     width: 45%;
+  height: 50%;
+}
+
+.oneImg img{
+   margin: auto;
+
+}
+
+#section1 h1{
+  text-align: center;
+  font-size: 70px;
+}
+
+#section1 p{
+  text-align: center;
+  font-size: 25px;
+}
+
+#feat span {
+  font-size: 100px;
+  text-align: center;
+  color: black;
+}
+
+
+#section3 h1 {
+  color: white;
+}
+
+#section4 {
+  padding: 50px;
+}
+
+.analyticsThree {
+
+  margin: 10px;
+  text-align: center;
+  color: white;
+}
+
+.numCount {
+  font-size: 70px;
+}
+
+.analyticsThree h2 {
+  text-align: center;
+}
+
+/***************/
+/*  THE TEAM */
+/***************/
+
+#section4 h2 {
+  text-align: center;
+
+}
+
+/*******************/
+/* ANALYTICS PAGES */
+/*******************/
+.BAheader{
+  font:500 40px Lato;
+  letter-spacing:2px;
+  padding:5px !important;
+  color:#222B31 !important;
+  text-transform:uppercase
+}
+
+.BAcount{
+  text-align: center;
+  font:500 120px Lato;
+  letter-spacing:2px;
+  padding:5px !important;
+  color:rgb(80, 104, 52) !important;
+  text-transform:uppercase
+}

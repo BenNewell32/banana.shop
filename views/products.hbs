@@ -1,0 +1,68 @@
+{{#if user}}
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<label for="p_scnts">
+    <input type="text" id="p_scnt" size="20" name="p_scnt" value="" placeholder="Product Name" />
+</label>
+<label for="p_scnts">
+    <input type="text" id="p_scnt" size="20" name="p_scnt" value="" placeholder="Category" />
+</label>
+<label for="p_scnts">
+    <input type="text" id="p_scnt" size="20" name="p_scnt" value="" placeholder="Company" />
+</label>
+<br>
+<br>
+{{#each products}}
+    <div class='row prod' id={{id}}>
+        <div class="col-md-10 ">
+            <div class='productshelf'>
+            </div>
+            <div class="row">
+                <div class="col-md-5" >
+                    <h3>{{short_desc}}</h3>
+                </div>
+                <div class="col-md-2">
+                    <h5>{{Category.category_name}}</h5>
+                </div>
+            </div>
+        </div> 
+        <div class="col-md-1">
+            <button id={{id}} class='btn btn-danger buy'>buy</button>
+        </div>
+        <div class="col-md-1">
+            <h1>${{price}}</h1>
+        </div>
+        <br>
+    </div>       
+{{/each}}
+
+<script class="javascript">
+    $(".buy").on("click", function(event) {
+        id = $(this).attr('id');
+        console.log( $(this).attr('id'));
+
+   var clickid = {
+     id: $(this).attr('id')
+   };
+
+       // Send the PUT request.
+    $.ajax("/add/click/", {
+      type: "POST",
+      data: clickid
+    }).then(
+      function() {
+        console.log("adding click");
+      }
+    );
+    });
+</script>
+{{/if}}
+{{#unless user}}
+    <script>
+        window.location.href = "/login";
+    </script>
+{{/unless}}

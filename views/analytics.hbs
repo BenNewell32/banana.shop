@@ -1,0 +1,74 @@
+{{#if user}}
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="row">
+    <div class="col-md-4">
+        <h1 class='BAheader'>TOTAL SALES</h1>
+        <div class='BAcount' id='BAsales'>$1,100,343</div>
+    </div>
+    <div class="col-md-4">
+        <h1 class='BAheader'>TOTAL USERS</h1>
+        <div class='BAcount' id='BAusers'></div>
+    </div>
+    <div class="col-md-4">
+        <h1 class='BAheader'># of Orders</h1>
+        <div class='BAcount' id='BAclients'></div>
+    </div>
+</div>
+<div class="row">
+    <<div class="sales_chart">
+    </div>
+</div>
+
+<br>
+<br>
+<div class='productshelf'>
+</div>
+<br>
+<br>
+
+<div class="row">
+    <div class="col-md-4">
+        <h1 class='BAheader'>TOP Products</h1>
+        <div class='topCharts' id="prod_div"></div>
+    </div>
+    <div class="col-md-4">
+        <h1 class='BAheader'>Top Users</h1>
+        <div class='topCharts' id="user_div"></div>
+    </div>
+    <div class="col-md-4">
+        <h1 class='BAheader'>Top Orders</h1>
+        <div class='topCharts' id="order_div"></div>
+    </div>
+</div>
+
+<script class="javascript">
+    $(".buy").on("click", function(event) {
+        id = $(this).attr('id');
+        console.log( $(this).attr('id'));
+
+   var clickid = {
+     id: $(this).attr('id')
+   };
+
+       // Send the PUT request.
+    $.ajax("/add/click/", {
+      type: "POST",
+      data: clickid
+    }).then(
+      function() {
+        console.log("adding click");
+      }
+    );
+    });
+</script>
+{{/if}}
+{{#unless user}}
+    <script>
+        window.location.href = "/login";
+    </script>
+{{/unless}}
